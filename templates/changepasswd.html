@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Log In
+{% endblock %}
+
+{% block main %}
+    <form action="/changepasswd" method="post">
+        <div class="mb-3">
+            <input class="form-control mx-auto w-auto" id="curpasswd" name="curpasswd" placeholder="Current Password" type="password">
+        </div>
+        <div class="mb-3">
+            <input class="form-control mx-auto w-auto" id="newpasswd" name="newpasswd" placeholder="New Password" type="password">
+        </div>
+        <div class="mb-3">
+            <input class="form-control mx-auto w-auto" id="confirmpasswd" name="confirmpasswd" placeholder="Confirm New Password" type="password">
+        </div>
+        <button class="btn btn-primary" type="submit">Change Password</button>
+    </form>
+    <div style="padding-top: 2rem;">
+        <p>
+            Password should have no spaces and atleast 5 alphabets, 3 digits and 3 special characters.
+        </p>
+    </div>
+{% endblock %}
